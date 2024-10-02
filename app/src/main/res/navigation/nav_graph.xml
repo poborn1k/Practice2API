@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authorizationFragment">
+
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.example.practice2api.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_mainContentFragment"
+            app:destination="@id/mainContentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainContentFragment"
+        android:name="com.example.practice2api.MainContentFragment"
+        android:label="fragment_main_content"
+        tools:layout="@layout/fragment_main_content" >
+        <action
+            android:id="@+id/action_mainContentFragment_to_changeDataFragment"
+            app:destination="@id/changeDataFragment" />
+        <action
+            android:id="@+id/action_mainContentFragment_to_authorizationFragment3"
+            app:destination="@id/authorizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeDataFragment"
+        android:name="com.example.practice2api.ChangeDataFragment"
+        android:label="fragment_change_data"
+        tools:layout="@layout/fragment_change_data" >
+        <action
+            android:id="@+id/action_changeDataFragment_to_mainContentFragment2"
+            app:destination="@id/mainContentFragment" />
+        <action
+            android:id="@+id/action_changeDataFragment_to_mainContentFragment"
+            app:destination="@id/mainContentFragment" />
+    </fragment>
+</navigation>
